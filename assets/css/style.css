@@ -32,6 +32,21 @@ body {
   text-align: center;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
 .btn:hover {
   cursor: pointer;
 }
@@ -76,6 +91,7 @@ a {
 
 .header img {
   width: 10rem;
+  border-radius: 50%;
 }
 
 .header {
@@ -310,6 +326,7 @@ a {
 }
 
 .popular-content .popular-item {
+  flex: 1;
   border-radius: 10px;
   border: 1px solid #e2dfda;
   background-color: #fff;
@@ -386,4 +403,74 @@ a {
 .popular-content .info-foot .btn-book:hover {
   background: var(--primary-color);
   color: #fff;
+}
+
+.feedback-content {
+  margin-top: 135px;
+  padding: 64px 0;
+  background-color: #2e2100;
+}
+
+.feedback-item {
+  max-width: 1170px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.feedback-item .avatar {
+  /* object-position: 50% 0; */
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.feedback-item .menber-name {
+  margin-top: 18px;
+  font-size: 2.4rem;
+  font-family: var(--font-heading);
+  color: #fff;
+  line-height: 1.42;
+  font-weight: 700;
+}
+
+.feedback-item .desc {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  color: #e2dfda;
+  line-height: 1.86;
+}
+
+.feedback-item .dots {
+  margin-top: 18px;
+  display: flex;
+  gap: 6px;
+}
+
+.feedback-item .dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #634700;
+}
+
+.feedback-item .dots .dot.active {
+  background-color: #fa721d;
+}
+
+.feedback-item .feedback-right {
+  width: 66%;
+  margin-left: auto;
+}
+
+.feedback-item blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
+}
+
+.feedback-list {
+  display: flex;
+  overflow: hidden;
 }
